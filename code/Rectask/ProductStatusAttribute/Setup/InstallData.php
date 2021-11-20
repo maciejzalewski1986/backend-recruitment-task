@@ -29,7 +29,7 @@ class InstallData implements InstallDataInterface
      */
     public function __construct(EavSetupFactory $eavSetupFactory)
     {
-    	file_put_contents('/var/www/chroot/praktyka01/log.txt', "install construct\n");
+
         $this->eavSetupFactory = $eavSetupFactory;
     }
 
@@ -59,13 +59,14 @@ class InstallData implements InstallDataInterface
         				'required' => false,
         				'sort_order' => 50,
         				'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
-        				'is_used_in_grid' => false,
-        				'is_visible_in_grid' => false,
+        				'is_used_in_grid' => true, //czy atrybut może byc na liscie produktow w panelu admina
+        				'is_visible_in_grid' => true, //czy atrybut jest domyslnie wlaczony w panelu admina
         				'is_filterable_in_grid' => false,
         				'visible' => true,
         				'is_html_allowed_on_front' => true,
         				'visible_on_front' => true
         		]
         		);
+
     }
 }
