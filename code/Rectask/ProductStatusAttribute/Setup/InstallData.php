@@ -43,7 +43,8 @@ class InstallData implements InstallDataInterface
     {
     	
         $eavSetup = $this->eavSetupFactory->create();
-
+		
+        $new_label = 'Product label';
         
         $eavSetup->addAttribute(
         		Product::ENTITY,
