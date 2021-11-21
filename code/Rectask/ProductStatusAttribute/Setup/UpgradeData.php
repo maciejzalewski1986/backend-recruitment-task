@@ -32,7 +32,6 @@ class UpgradeData implements UpgradeDataInterface
     		EavSetupFactory $eavSetupFactory
     		)
     {
-    	file_put_contents('/var/www/chroot/praktyka01/log.txt', "construct\n");
         $this->eavSetupFactory = $eavSetupFactory;
     }
 

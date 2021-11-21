@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<body>
+    <referenceContainer name="product.info.main">
+        <block class="Rectask\ProductStatusAttribute\Catalog\Block\Product\View\Status"
+            name="product.view.status"
+            template="Rectask_ProductStatusAttribute::catalog/product/view/productstatusattribute.phtml"
+            before="-">
+        </block>
+        <!-- add this line below  -->   
+       <move element="product.view.status" destination="product.info.main" after="page.main.title" />
+    </referenceContainer>
+</body>

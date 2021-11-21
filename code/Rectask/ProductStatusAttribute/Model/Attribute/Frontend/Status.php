@@ -14,6 +14,6 @@ class Status extends AbstractFrontend
     public function getValue(DataObject $object)
     {
         $value = $object->getData($this->getAttribute()->getAttributeCode());
-        return "<b>$value</b>";
+        return $value;
     }
 }

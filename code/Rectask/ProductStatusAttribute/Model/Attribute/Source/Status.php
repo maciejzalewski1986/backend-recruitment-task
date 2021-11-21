@@ -15,13 +15,12 @@ class Status extends AbstractSource
         if (!$this->_options) {
 
         	$this->_options = [
-        			['label' => __('Nowy'), 'value' => 1],
-        			['label' => __('Powystawowy'), 'value' => 2],
-        			['label' => __('Poleasingowy'), 'value' => 3],
-        			['label' => __('Używany'), 'value' => 4],
-        			['label' => __('Zwrócony'), 'value' => 5],
+        			['label' => __('Nowy'), 'value' => "1"],
+        			['label' => __('Powystawowy'), 'value' => "2"],
+        			['label' => __('Poleasingowy'), 'value' => "3"],
+        			['label' => __('Używany'), 'value' => "4"],
+        			['label' => __('Zwrócony'), 'value' => "5"],
         	];
-
         }
         return $this->_options;
     }
