@@ -1,0 +1,21 @@
+<?php $_product = $block->getProduct() ?>
+
+<?php
+//echo 'My Product Name Is: ' . $_product->getName(); 
+$attr = $_product->getResource()->getAttribute('product_label');
+echo "<h3>".$attr->getStoreLabel()."</h3>";
+
+
+$vals =  $_product->getResource()->getAttribute('product_label')->getFrontend()->getValue($_product);
+
+
+
+if($vals !== null  )
+{
+	$values = explode(',',$vals );
+	foreach ($values as $v)
+	{
+		echo "<h3> ".$v." - ".$attr->getSource()->getOptionText(trim($v))."</h3>";
+	}
+}
+?>
